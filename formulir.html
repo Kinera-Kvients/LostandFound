@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulir - Lost and Found</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free Website Template" name="keywords">
+    <meta content="Free Website Template" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 nav-bar">
+        <nav class="navcus navbar navbar-expand-lg bg-none navbar-dark py-3">
+            <a href="index.html" class="navbar-brand px-lg-4 m-0">
+                <h1 class="m-0 display-8 text-uppercase text-white">Lost and Found</h1>
+            </a>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto p-4">
+                    <a href="index.php" class="nav-item nav-link">Home</a>
+                    <a href="index.php#tentang" class="nav-item nav-link">Tentang Kami</a>
+                    <a href="index.php#tutorial" class="nav-item nav-link">Tutorial</a>
+                    <a href="index.php#daftar-barang" class="nav-item nav-link">Daftar Barang</a>
+                    <a href="formulir.php" class="nav-item nav-link active">Lapor</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 position-relative">
+        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5"
+            style="min-height: 400px">
+            <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Laporan Barang</h1>
+            <div class="d-inline-flex mb-lg-5">
+                <p class="m-0 text-white"><a class="text-white" href="index.html">Home</a></p>
+                <p class="m-0 text-white px-2">/</p>
+                <p class="m-0 text-white">Laporan Barang</p>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid pt-5">
+        <div class="container">
+            <div class="section-judul">
+                <h4 class="text-uppercase judul">Laporan Barang</h4>
+                <h1 class="display-4 m-3">Formulir Laporan Barang</h1>
+            </div>
+            <div class="row px-3 pb-2">
+                <div class="col-sm-4 text-center mb-3">
+                    <p class="service-icon mb-0 font-weight-bold">1</p>
+                    <h4 class="font-weight-bold mt-3">Isi Formulir</h4>
+                </div>
+                <div class="col-sm-4 text-center mb-3">
+                    <p class="service-icon mb-0 font-weight-bold">2</p>
+                    <h4 class="font-weight-bold mt-3">Upload Foto Barang</h4>
+                </div>
+                <div class="col-sm-4 text-center mb-3">
+                    <p class="service-icon mb-0 font-weight-bold">3</p>
+                    <h4 class="font-weight-bold mt-3">Kirim Laporan</h4>
+                </div>
+            </div>
+            <div class="contact-form">
+                <div id="success"></div>
+                <form enctype="multipart/form-data">
+                    <div class=" row">
+                        <div class="col-lg-6 col-md-12 mb-5">
+                            <div class="control-group">
+                                <input type="text" class="form-control bg-transparent p-4" style="margin:15px 0 ;"
+                                    placeholder="Nama" required="required" style="margin:15px 0 ;"
+                                    name="nama_pelapor" />
+                            </div>
+                            <div class="control-group">
+                                <input type="number" class="form-control bg-transparent p-4" placeholder="Whatsapp"
+                                    required="required" style="margin:15px 0 ;" name="whatsapp" />
+                            </div>
+                            <div class=" control-group">
+                                <input type="text" class="form-control bg-transparent p-4" placeholder="Nama Barang"
+                                    required="required" style="margin:15px 0 ;" name="nama_barang" />
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select bg-transparent border-primary px-4" style="height: 49px;"
+                                    name="kategori_barang" required="required">
+                                    <option value="" disabled selected>Pilih Kategori</option>
+                                    <option value="Kunci">Kunci</option>
+                                    <option value="Pakaian">Pakaian</option>
+                                    <option value="Elektronik">Elektronik</option>
+                                    <option value="Alat Akademik">Alat Akademik</option>
+                                    <option value="Aksesori Pribadi">Aksesori Pribadi</option>
+                                    <option value="Barang Umum">Kategori Umum</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select bg-transparent border-primary px-4" style="height: 49px;"
+                                    name="tipe_laporan" required="required">
+                                    <option value="" disabled selected>Pilih Tipe Laporan</option>
+                                    <option value="kehilangan">Kehilangan</option>
+                                    <option value="penemuan">Penemuan</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 mb-5">
+                            <div class="control-group">
+                                <input type="text" class="form-control bg-transparent p-4" placeholder="Lokasi Penemuan"
+                                    required="required" style="margin:15px 0 ;" name="lokasi" />
+                            </div>
+                            <div class="control-group">
+                                <input type="date" class="form-control bg-transparent p-4" id="tanggal"
+                                    placeholder="tanggal" required="required" style="margin:15px 0 ;"
+                                    name="tanggal_kejadian" />
+                            </div>
+                            <div class="control-group">
+                                <input type="file" accept="image/*" name="foto" />
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control bg-transparent py-3 px-4" rows="5" placeholder="Deskripsi"
+                                    required="required" style="margin:15px 0 ;" name="deskripsi"></textarea>
+                            </div>
+                            <div>
+                                <button class="btn-kirim font-weight-bold" style="border-radius:5px;"
+                                    type="submit">Kirim
+                                    laporan</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer text-white mt-5 pt-5 px-0">
+        <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Kontak</h4>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>Surabaya, Kantor Universitas Terbuka</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+62 831* **** **13</p>
+                <p class="m-0"><i class="fa fa-envelope mr-2"></i>lostandfound@gmail.com</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Ikuti Kami</h4>
+                <p>Ikuti kami lewat sosial media </p>
+                <div class="d-flex justify-content-start">
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i
+                            class="fab fa-instagram"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-github-alt"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Buka Kantor</h4>
+                <div>
+                    <h6 class="text-white text-uppercase">senin - jumat</h6>
+                    <p>09.00 - 16.00</p>
+                    <h6 class="text-white text-uppercase">sabtu - minggu</h6>
+                    <p>10.00 - 15.00</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Disclaimer</h4>
+                <p>Website Lost & Found berfungsi sebagai media untuk membantu pengguna
+                    melaporkan dan mencari barang hilang. Proses verifikasi, komunikasi, dan penyerahan
+                    barang dilakukan langsung oleh pemilik dan penemu. Pihak pengelola tidak bertanggung
+                    jawab atas kesalahan informasi atau klaim yang tidak valid.*</p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- JavaScript Libraries -->
+    <script>
+        document.getElementById("tanggal").value = new Date().toISOString().split("T")[0];
+    </script>
+</body>
+
+</html>
